@@ -2,10 +2,10 @@
 
 ###
 Requisitos técnicos (lo mínimo para que funcione):
-Python instalado y pip
-Django instalado dentro de un entorno virtual (venv)
-Laragon levantando BD (MariaDB 11.8.6 por puerto 3306)
-Editor (VS Code)
+-Python instalado y pip
+-Django instalado dentro de un entorno virtual (venv)
+-Laragon levantando BD (MariaDB 11.8.6 por puerto 3306)
+-Editor (VS Code)
 ###
 
 ###
