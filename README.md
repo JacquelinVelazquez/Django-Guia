@@ -7,6 +7,7 @@
 - Laragon levantando BD (MariaDB 11.8.6 por puerto 3306)  
 - Editor (VS Code)
 ## Estructura:
+```text
 sunlin/
 ├─ manage.py
 ├─ sunlin/
@@ -33,6 +34,7 @@ sunlin/
    ├─ urls.py
    ├─ views.py
    └─ tests.py
+```
    
 ## 0) Prender MySQL/MariaDB (Laragon)
 - Abrir Laragon
