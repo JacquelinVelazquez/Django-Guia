@@ -199,8 +199,9 @@ members/templates/members/
 {% else %}
   <p>No hay artículos todavía.</p>
 {% endif %}
-
+```
 ### 14.2 Nuevo: new_article_form.html
+```html
 <h1>Nuevo artículo</h1>
 <form method="post">
   {% csrf_token %}
@@ -215,8 +216,18 @@ members/templates/members/
 <a href="{% url 'edit_article' article.pk %}">✏️ Editar</a>
 <br>
 <a href="{% url 'all_articles' %}">⬅ Volver</a>
+```
+### 14.3 Detalle: article_detail.html
+```html
+<h1>{{ article.name }}</h1>
+<p>{{ article.content }}</p>
 
+<a href="{% url 'edit_article' article.pk %}">✏️ Editar</a>
+<br>
+<a href="{% url 'all_articles' %}">⬅ Volver</a>
+```
 ### 14.4 Editar: edit_article_form.html
+```html
 <h1>Editar artículo</h1>
 <form method="post">
   {% csrf_token %}
@@ -239,9 +250,11 @@ urlpatterns = [
     path("article/<int:pk>/", views.ArticleDetailView.as_view(), name="article_detail"),
     path("article/<int:pk>/edit/", views.EditArticleForm.as_view(), name="edit_article"),
 ]
+```
 
 ## 16) Conectar las URLs en el proyecto (sunlin/urls.py)
 En sunlin/sunlin/urls.py:
+```python
 from django.contrib import admin
 from django.urls import path, include
 urlpatterns = [
