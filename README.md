@@ -7,39 +7,34 @@
 - Laragon levantando BD (MariaDB 11.8.6 por puerto 3306)  
 - Editor (VS Code)
 
-##
-0) Prender MySQL/MariaDB (Laragon)
+## 0) Prender MySQL/MariaDB (Laragon)
 - Abrir Laragon
 - Click Iniciar Todo
 - Verifica que MySQL/MariaDB esté en verde y el puerto sea 3306
 - Abre HeidiSQL y confirma:
-  - SELECT VERSION();
-    -- sale: 11.x.x-MariaDB
-##
+    SELECT VERSION();
+      sale: 11.x.x-MariaDB
 
-### 
-1) Crear carpeta del proyecto
+## 1) Crear carpeta del proyecto
 mkdir Joe_Class_Django
 cd Joe_Class_Django
-###
 
-###
-2) Crear y activar entorno virtual (env)
+## 2) Crear y activar entorno virtual (env)
 python -m venv env
 .\env\Scripts\Activate.ps1
-###
 
-3) Instalar Django + driver para MariaDB
+## 3) Instalar Django + driver para MariaDB
+```python
 pip install django
 pip install mysqlclient
-
-4) Crear el proyecto Django (sunlin)
+```
+## 4) Crear el proyecto Django (sunlin)
 django-admin startproject sunlin
 cd sunlin
 
-Prueba que corre:
-python manage.py runserver
-y abre: http://127.0.0.1:8000/
+- Prueba que corre:
+  python manage.py runserver
+  y abre: http://127.0.0.1:8000/
 
 5) Crear la base de datos (sunlin_database)
 En HeidiSQL (Laragon > Base de Datos):
