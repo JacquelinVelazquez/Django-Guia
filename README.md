@@ -6,7 +6,34 @@
 - Django instalado dentro de un entorno virtual (venv)  
 - Laragon levantando BD (MariaDB 11.8.6 por puerto 3306)  
 - Editor (VS Code)
-
+## Estructura:
+sunlin/
+├─ manage.py
+├─ sunlin/
+│  ├─ __init__.py
+│  ├─ settings.py
+│  ├─ urls.py
+│  ├─ asgi.py
+│  └─ wsgi.py
+└─ members/
+   ├─ migrations/
+   │  ├─ 0001_initial.py
+   │  ├─ 0002_...py
+   │  └─ __init__.py
+   ├─ templates/
+   │  └─ members/
+   │     ├─ article_list.html
+   │     ├─ article_detail.html
+   │     ├─ new_article_form.html
+   │     └─ edit_article_form.html
+   ├─ admin.py
+   ├─ apps.py
+   ├─ forms.py
+   ├─ models.py
+   ├─ urls.py
+   ├─ views.py
+   └─ tests.py
+   
 ## 0) Prender MySQL/MariaDB (Laragon)
 - Abrir Laragon
 - Click Iniciar Todo
