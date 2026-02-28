@@ -14,13 +14,17 @@ Abre HeidiSQL y confirma:
 SELECT VERSION();
 -- sale: 11.x.x-MariaDB
 
+### 
 1) Crear carpeta del proyecto
 mkdir Joe_Class_Django
 cd Joe_Class_Django
+###
 
+###
 2) Crear y activar entorno virtual (env)
 python -m venv env
 .\env\Scripts\Activate.ps1
+###
 
 3) Instalar Django + driver para MariaDB
 pip install django
