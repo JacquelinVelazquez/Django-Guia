@@ -101,16 +101,18 @@ Y en HeidiSQL debe aparecer: members_article
 
 ## 12) Crear formularios (forms.py) para “Nuevo” y “Editar”
 Crea/edita: members/forms.py
+```python
 from django import forms
 from .models import Article
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
         fields = ["name", "content"]
+```
 
 ## 13) Crear vistas (List + Detail + Create + Edit)
 En members/views.py:
-
+```python
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from django.views.generic import ListView, DetailView
@@ -146,13 +148,15 @@ class EditArticleForm(View):
             form.save()
             return redirect("article_detail", pk=article.pk)
         return render(request, "members/edit_article_form.html", {"form": form, "article": article})
+```
 
 ## 14) Crear templates (HTML)
 Crea carpetas:
 members/templates/members/
 
 ### 14.1 Lista: article_list.html
-    <h1>Artículos</h1>
+```html
+<h1>Artículos</h1>
 <a href="{% url 'new_article' %}">➕ Nuevo</a>
 {% if article_list %}
   <ul>
@@ -192,10 +196,12 @@ members/templates/members/
 </form>
 <hr>
 <a href="{% url 'article_detail' article.pk %}">⬅ Volver</a>
+```
 
 
 ## 15) URLs de la app (members/urls.py)
 Crea: members/urls.py
+```python
 from django.urls import path
 from . import views
 urlpatterns = [
@@ -213,7 +219,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("members/", include("members.urls")),
 ]
-
+```
 
 ## 17) Probar todo (runserver)
+```python
 python manage.py runserver
+```
